@@ -1,0 +1,44 @@
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font5[Introdução]
+]]
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# O que é Docker:
+
+--
+
+  ## Docker é uma ferramenta desenvolvida pela .text-hl[Google]
+  ## para facilitar o desenvolvimento e implementação de aplicativos através de 
+  ## .font2[CONTAINERS]
+  
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Como o Docker funciona?
+
+--
+  
+  ## O Docker é uma interface que manipula diferentes sistemas operacionais (chamados de Containers) em uma máquina. Ele encapsula diferentes versões de ambiente, .text-hl2[Sistema Operacional, Programas, Pacotes e Scripts] desenvolvidos pelo usuáriom em imagens.
+  
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# O que isso traz de diferente
+
+--
+  
+  * Esse formato de desenvolvimento permite aos desenvolvedores terem acesso a uma plataforma mais estável, garantindo reprodutibilidade;
+  * Ele abstrai muitas funções de gerenciamento de máquinas virtuais que nem todos os usuários teríam domínio;
+  * Além disso, dada a configuração simples das imagens, ele permite a implementação e atualizaçao de diversos serviços de forma mais rápida.
+  
+---
