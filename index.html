@@ -5,8 +5,10 @@
     <meta charset="utf-8" />
     <meta name="author" content=" Luis Henrique Zanandréa Paese" />
     <link href="libs/remark-css/ninjutsu.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style\shinobi.css" type="text/css" />
-    <link rel="stylesheet" href="style\ninpo.css" type="text/css" />
+    <link href="libs/ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style/shinobi.css" type="text/css" />
+    <link rel="stylesheet" href="style/ninpo.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -31,7 +33,7 @@ class: middle bg-main1 hide-slide-number
 * Por quê usar o Docker
 * DockerFile vs Docker-Compose
   * DockerHUB
-* RStudio/Shiny/Plumber usando rocker
+* RStudio/Shiny/Plumber usando Docker
 * Conclusão
 ]
 
@@ -43,7 +45,7 @@ class: bg-main1 split-30 hide-slide-number
 ]
 .column.slide-in-right[
 .sliderbox.bg-main2.vmiddle[
-.font5[Introdução]
+.font3[Introdução]
 ]]
 
 ---
@@ -89,7 +91,7 @@ class: bg-main1 split-30 hide-slide-number
 ]
 .column.slide-in-right[
 .sliderbox.bg-main2.vmiddle[
-.font5[Por quê usar o Docker]
+.font3[Por quê usar o Docker]
 ]]
 
 ---
@@ -116,11 +118,11 @@ class: middle center bg-main1 hide-slide-number
   
   ## Todo script, código, aplicação que é desenvolvida pode ser colocada em um Container do Docker para distribuição e testes.
   
---- 
+---
 
 class: middle center bg-main1 hide-slide-number
-  
-# Onde o R entra nisso?
+
+# E onde o R entra em tudo isso?
 
 --
   
@@ -129,6 +131,187 @@ class: middle center bg-main1 hide-slide-number
   ## E todos esses serviços podem utilizar dos benefícios do Docker para facilitar a implementação!
   
 ---
+
+
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font3[HowTo - Dockerfile and Docker Compose]
+]]
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Dockerfile
+
+--
+  ## Dockefile é simplesmente um arquivo texto com um conjunto de comandos que o usuário define para construir uma imagem.
+  
+--
+
+```dockerfile
+
+FROM rocker/shiny:3.5.3 # Aqui é demonstrada a imagem-base
+
+RUN R -e "install.packages('dplyr')" # Aqui são inseridos códigos a serem 
+                                        # executados pelo container
+
+COPY apps/. /srv/shiny-server/ # Aqui são feitas as cópias de arquivos 
+  # da máquina local para o container
+  
+```
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Docker-Compose
+
+--
+  ## Docker-Compose é uma ferramenta utilizaada para a construção de uma imagem multi-container.
+  ## São definidos no `docker-compose.yaml` os serviços necessários para o aplicativo rodar em um ambiente isolado.
+  
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Docker-Compose
+
+
+```r
+version: "3"
+
+services:
+  shiny:
+    image: lhzpaese/shiny:3.5.3
+    container_name: shiny_server
+    ports:
+      - "3838:3838"
+  rstudio:
+    image: lhzpaese/rstudio:3.5.3
+    container_name: rstudio_server
+    ports:
+      - "8787:8787"
+```
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# DockerHUB
+
+--
+
+  ## Docker Hub é um repositório baseado na nuvem, onde os usuários do Docker criam, testam, guardam e distribuem imagens de containers. 
+  ## Ele permite a criação de imagens a partir de projetos no .text-hl[GitHub] <i class="ion  ion-social-github "></i>, compilando novas versões a cada commit feito pelo usuário.
+  
+---
+
+
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font3[RStudio + Shiny + Plumber usando Docker]
+]]
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Projeto Rocker
+
+--
+
+  ## O Projeto Rocker é mantido Carl Boettiger(UC Berkeley) e Dirk Eddelbuettel(Univ. of Illinois) e pela comunidade R.
+  ### O objetivo do projeto é fornecer no DockerHub <i class="fab  fa-docker "></i> imagens dos principais serviços que podem ser hospeados com um ambiente R.
+  # .text_hl[[Rocker Project](https://www.rocker-project.org/)]
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# RStudio
+
+--
+
+  ## Rodando o comando abaixo no terminal, será iniciado um container com a imagem do RStudio Server na porta 8787.
+  
+
+```sh
+docker run -d -p 8787:8787 rocker/rstudio:3.5.3
+```
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Shiny
+
+--
+
+  ## Rodando o comando abaixo no terminal, será iniciado um container com a imagem do Shiny Server na porta 3838.
+  
+
+```sh
+docker run -d -p 3838:3838 rocker/shiny:3.5.3
+```
+
+  ## O aplicativo iniciará com dois aplicativos dummy na imagem do Shiny Server.
+  
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Plumber
+
+--
+
+  ## A imagem contendo o serviço Plumber não é disponibilizada pelo Projeto Rocker, mas sim pelos desenvolvedores do pacote que fornece a API.
+  ## O código fonte pode ser encontrado no [GitHub <i class="ion  ion-social-github "></i>](https://github.com/trestletech/plumber)
+  
+
+```sh
+docker run -p 8080:8000 trestletech/plumber:latest
+```
+
+---
+
+
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font3[Conclusão]
+]]
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Utilização do Docker
+
+--
+
+  * O Docker pode ser uma ferramente muito útil para facilitar o desenvolvimento, debug e implantação de aplicativos e serviços.
+  * Com a crescente integração com o R, ele se mostra como um facilitador para equipes que trabalham com análise de dados publicarem seus trabalhos, garantindo maior visibilidade, com menor preocupação em manutenção de servidores
+  * Além disso, via integração com serviços como Kubernetes, é possível construir uma solução escalável para qualquer serviço desenvolvido em R.
+  
+---
+
+class: bg-main5 middle center hide-slide-number
+
+## [<i class="fas  fa-envelope-open "></i>](mailto:lhzpaese@gmail.com) lhzpaese@gmail.com
+## [<i class="fab  fa-github "></i>](https://github.com/paeselhz) https://github.com/paeselhz
+## [<i class="fab  fa-linkedin "></i>](https://www.linkedin.com/in/lhzpaese/) https://www.linkedin.com/in/lhzpaese/
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

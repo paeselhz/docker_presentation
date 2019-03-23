@@ -1,0 +1,75 @@
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font3[HowTo - Dockerfile and Docker Compose]
+]]
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Dockerfile
+
+--
+  ## Dockefile é simplesmente um arquivo texto com um conjunto de comandos que o usuário define para construir uma imagem.
+  
+--
+```{dockerfile echo = T, eval = F}
+
+FROM rocker/shiny:3.5.3 # Aqui é demonstrada a imagem-base
+
+RUN R -e "install.packages('dplyr')" # Aqui são inseridos códigos a serem 
+                                        # executados pelo container
+
+COPY apps/. /srv/shiny-server/ # Aqui são feitas as cópias de arquivos 
+  # da máquina local para o container
+  
+```
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Docker-Compose
+
+--
+  ## Docker-Compose é uma ferramenta utilizaada para a construção de uma imagem multi-container.
+  ## São definidos no `docker-compose.yaml` os serviços necessários para o aplicativo rodar em um ambiente isolado.
+  
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Docker-Compose
+
+```{r echo = T, eval = F}
+version: "3"
+
+services:
+  shiny:
+    image: lhzpaese/shiny:3.5.3
+    container_name: shiny_server
+    ports:
+      - "3838:3838"
+  rstudio:
+    image: lhzpaese/rstudio:3.5.3
+    container_name: rstudio_server
+    ports:
+      - "8787:8787"
+```
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# DockerHUB
+
+--
+
+  ## Docker Hub é um repositório baseado na nuvem, onde os usuários do Docker criam, testam, guardam e distribuem imagens de containers. 
+  ## Ele permite a criação de imagens a partir de projetos no .text-hl[GitHub] `r icon::ii_social_github()`, compilando novas versões a cada commit feito pelo usuário.
+  
+---
