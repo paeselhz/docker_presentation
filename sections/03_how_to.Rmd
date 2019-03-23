@@ -36,7 +36,7 @@ class: middle center bg-main1 hide-slide-number
 # Docker-Compose
 
 --
-  ## Docker-Compose é uma ferramenta utilizaada para a construção de uma imagem multi-container.
+  ## Docker-Compose é uma ferramenta utilizada para a construção de uma imagem multi-container.
   ## São definidos no `docker-compose.yaml` os serviços necessários para o aplicativo rodar em um ambiente isolado.
   
 ---

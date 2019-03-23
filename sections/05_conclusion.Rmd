@@ -14,11 +14,13 @@ class: middle center bg-main1 hide-slide-number
 # Utilização do Docker
 
 --
-
-  * O Docker pode ser uma ferramente muito útil para facilitar o desenvolvimento, debug e implantação de aplicativos e serviços.
-  * Com a crescente integração com o R, ele se mostra como um facilitador para equipes que trabalham com análise de dados publicarem seus trabalhos, garantindo maior visibilidade, com menor preocupação em manutenção de servidores
-  * Além disso, via integração com serviços como Kubernetes, é possível construir uma solução escalável para qualquer serviço desenvolvido em R.
-  
+  <div class = "bullet2">
+  <ul>
+  <li> O Docker pode ser uma ferramente muito útil para facilitar o desenvolvimento, debug e implantação de aplicativos e serviços. </li>
+  <li> Com a crescente integração com o R, ele se mostra como um facilitador para equipes que trabalham com análise de dados publicarem seus trabalhos, garantindo maior visibilidade, com menor preocupação em manutenção de servidores </li>
+  <li> Além disso, via integração com serviços como Kubernetes, é possível construir uma solução escalável para qualquer serviço desenvolvido em R. </li>
+  </ul>
+  </div>
 ---
 
 class: bg-main5 middle center hide-slide-number

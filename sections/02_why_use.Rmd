@@ -25,7 +25,7 @@ class: middle center bg-main1 hide-slide-number
 
 class: middle center bg-main1 hide-slide-number
 
-# Onde o Docker pode ser aplicado
+# Onde o Docker pode ser aplicado?
 
 --
   

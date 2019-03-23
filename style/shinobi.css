@@ -181,5 +181,12 @@ a { color: var(--link-color); text-decoration: none; }
 .outline li {
   margin-top: 10px;
   vertical-align: middle;
-  text-align: center;
+}
+
+div.bullet {
+  font-size:1.3em;
+}
+
+div.bullet2 {
+  font-size:1.5em;
 }

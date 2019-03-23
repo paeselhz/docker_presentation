@@ -11,7 +11,7 @@ class: bg-main1 split-30 hide-slide-number
 
 class: middle center bg-main1 hide-slide-number
 
-# O que é Docker:
+# O que é Docker?
 
 --
 
@@ -27,18 +27,21 @@ class: middle center bg-main1 hide-slide-number
 
 --
   
-  ## O Docker é uma interface que manipula diferentes sistemas operacionais (chamados de Containers) em uma máquina. Ele encapsula diferentes versões de ambiente, .text-hl2[Sistema Operacional, Programas, Pacotes e Scripts] desenvolvidos pelo usuáriom em imagens.
+  ## O Docker é uma interface que manipula diferentes sistemas operacionais (chamados de Containers) em uma máquina. Ele encapsula diferentes versões de ambiente, .text-hl2[Sistema Operacional, Programas, Pacotes e Scripts] desenvolvidos pelo usuário, em imagens.
   
 ---
 
 class: middle center bg-main1 hide-slide-number
 
-# O que isso traz de diferente
+# O que isso traz de diferente?
 
 --
-  
-  * Esse formato de desenvolvimento permite aos desenvolvedores terem acesso a uma plataforma mais estável, garantindo reprodutibilidade;
-  * Ele abstrai muitas funções de gerenciamento de máquinas virtuais que nem todos os usuários teríam domínio;
-  * Além disso, dada a configuração simples das imagens, ele permite a implementação e atualizaçao de diversos serviços de forma mais rápida.
+  <div class = "bullet">
+  <ul>
+  <li> Esse formato de desenvolvimento permite aos desenvolvedores terem acesso a uma plataforma mais estável, garantindo reprodutibilidade; </li>
+  <li> Ele abstrai muitas funções de gerenciamento de máquinas virtuais que nem todos os usuários teríam domínio; </li>
+  <li> Além disso, dada a configuração simples das imagens, ele permite a implementação e atualização de diversos serviços de forma mais rápida. </li>
+  </ul>
+  </div>
   
 ---
