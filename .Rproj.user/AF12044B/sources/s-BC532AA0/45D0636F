@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "3950701838",
     "id" : "45D0636F",
-    "lastKnownWriteTime" : 1553351810,
-    "last_content_update" : 1553351810525,
+    "lastKnownWriteTime" : 1553352705,
+    "last_content_update" : 1553352705254,
     "path" : "~/Documentos/docker_presentation/style/shinobi.css",
     "project_path" : "style/shinobi.css",
     "properties" : {
-        "cursorPosition" : "15,26",
-        "scrollLine" : "7"
+        "cursorPosition" : "184,1",
+        "scrollLine" : "158"
     },
     "relative_order" : 7,
     "source_on_save" : false,
