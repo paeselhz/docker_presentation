@@ -190,3 +190,7 @@ div.bullet {
 div.bullet2 {
   font-size:1.5em;
 }
+
+.bullet2 li{
+  padding:2%;
+} 

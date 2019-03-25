@@ -4,7 +4,7 @@ class: bg-main1 split-30 hide-slide-number
 ]
 .column.slide-in-right[
 .sliderbox.bg-main2.vmiddle[
-.font3[Por quê usar o Docker]
+.font3[Por quê usar o Docker?]
 ]]
 
 ---
@@ -17,7 +17,7 @@ class: middle center bg-main1 hide-slide-number
 
   ## Configuração simplificada das imagens
   ## Melhor administração de código
-  ### Evita a frase: .text-ht3["Mas na minha máquina roda"]
+  ### Evita a frase: .text-hl3["Mas na minha máquina roda"]
   ## Capacidades de encontrar problemas
   ### Facilita o processo de debug de código
         

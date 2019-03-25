@@ -15,7 +15,7 @@ class: middle center bg-main1 hide-slide-number
 
 --
 
-  ## O Projeto Rocker é mantido Carl Boettiger(UC Berkeley) e Dirk Eddelbuettel(Univ. of Illinois) e pela comunidade R.
+  ## O Projeto Rocker é mantido Carl Boettiger(UC Berkeley) e Dirk Eddelbuettel(Univ. of Illinois) e pela comunidade `r icon::fa_r_project()`.
   ### O objetivo do projeto é fornecer no DockerHub `r icon::fa_docker()` imagens dos principais serviços que podem ser hospeados com um ambiente R.
   # .text_hl[[Rocker Project](https://www.rocker-project.org/)]
 

@@ -27,7 +27,17 @@ class: middle center bg-main1 hide-slide-number
 
 --
   
-  ## O Docker é uma interface que manipula diferentes sistemas operacionais (chamados de Containers) em uma máquina. Ele encapsula diferentes versões de ambiente, .text-hl2[Sistema Operacional, Programas, Pacotes e Scripts] desenvolvidos pelo usuário, em imagens.
+  ## O Docker é uma interface que manipula diferentes Containers em uma máquina. Ele encapsula diferentes versões de ambiente, .text-hl2[Sistema Operacional, Programas, Pacotes e Scripts] desenvolvidos pelo usuário, em imagens.
+  
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Como o Docker funciona?
+
+<div align="center">
+<img src="images/docker_images_containers.png" height="65%" width="65%" />
+</div>
   
 ---
 
