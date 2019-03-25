@@ -23,6 +23,20 @@ class: middle center bg-main1 hide-slide-number
   </div>
 ---
 
+class: middle left bg-main1 hide-slide-number
+
+# Referências
+
+## `r icon::fa_angle_double_right()` [Docker 101: Fundamentals & The Dockerfile](https://medium.com/@paigen11/docker-101-fundamentals-the-dockerfile-b33b59d0f14b)
+
+## `r icon::fa_angle_double_right()` [An Introduction to Docker for R Users](https://colinfay.me/docker-r-reproducibility/)
+
+## `r icon::fa_angle_double_right()` [Using docker to deploy an R plumber API](https://medium.com/@skyetetra/using-docker-to-deploy-an-r-plumber-api-863ccf91516d)
+
+## `r icon::fa_angle_double_right()` [Applications with R and Docker](http://www.cascadia-analytics.com/docs/user2018-docker-r-tutorial-slides.pdf)
+
+---
+
 class: bg-main5 middle center hide-slide-number
 
 ## [`r icon::fa_envelope_open()`](mailto:lhzpaese@gmail.com) lhzpaese@gmail.com
