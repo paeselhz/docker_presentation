@@ -2,7 +2,7 @@
 title: "Aplicações de Docker com R"
 subtitle: "Desenvolvendo containers para aplicações de RStudio, Shiny e Plumber"
 author: "<br>Luis Henrique Zanandréa Paese<br>"
-date: "<br>Março 2019"
+date: "<br>Maio 2019"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -32,6 +32,7 @@ class: middle bg-main1 hide-slide-number
   * DockerHUB
 * RStudio/Shiny/Plumber usando Docker
 * Conclusão
+* Live Demo
 ]
 
 ---
@@ -48,4 +49,7 @@ class: middle bg-main1 hide-slide-number
 ```
 
 ```{r Conclusions, child='sections/05_conclusion.Rmd'}
+```
+
+```{r Live_Demo, child='sections/06_livedemo.Rmd'}
 ```
