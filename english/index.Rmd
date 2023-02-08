@@ -2,7 +2,7 @@
 title: "R applications using Docker"
 subtitle: "Developing containers for RStudio, Shiny and Plumber applications"
 author: "<br>Luis Paese<br>"
-date: "<br>Maio 2019"
+date: "<br>May 2019"
 output:
   xaringan::moon_reader:
     lib_dir: libs
