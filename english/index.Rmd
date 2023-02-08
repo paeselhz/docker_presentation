@@ -1,0 +1,56 @@
+---
+title: "R applications using Docker"
+subtitle: "Developing containers for RStudio, Shiny and Plumber applications"
+author: "<br>Luis Paese<br>"
+date: "<br>Maio 2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["style/shinobi.css", "ninjutsu", "style/ninpo.css"]
+    self_contained: false
+    nature: 
+      ratio: "16:9"
+      highlightStyle: monokai-sublime
+      highlightLines: true
+      countIncrementalSlides: false
+      seal: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = FALSE, eval = T, warning = F, message = F, dev = 'svg')
+# icons::download_fontawesome()
+```
+
+class: middle bg-main1 hide-slide-number
+
+.outline[
+## Outline
+
+* Introduction
+* Why use Docker
+* DockerFile vs Docker-Compose
+  * DockerHUB
+* RStudio/Shiny/Plumber using Docker
+* Final Remarks
+* Live Demo
+]
+
+---
+```{r Intro, child='sections/01_introduction.Rmd'}
+```
+
+```{r Why_Use, child='sections/02_why_use.Rmd'}
+```
+
+```{r How_To, child='sections/03_how_to.Rmd'}
+```
+
+```{r Examples, child='sections/04_examples.Rmd'}
+```
+
+```{r Conclusions, child='sections/05_conclusion.Rmd'}
+```
+
+```{r Live_Demo, child='sections/06_livedemo.Rmd'}
+```

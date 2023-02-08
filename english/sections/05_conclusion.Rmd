@@ -1,0 +1,46 @@
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font3[Final Remarks]
+]]
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Docker usage
+
+--
+  <div class = "bullet2">
+  <ul>
+  <li> Docker can be a very useful tool for the development, debug and deployment of multiple applications and services. </li>
+  <li> With the growing support and integration with R, it becomes a handy tool for teams that work with data analysis to publish their works, ensuring visibility and with minor headaches related to server maintenance. </li>
+  <li> Aside from this, by integrating with Kubernetes (or other cluster solutions) it is possible to build a scalable deployment for every solution built in R. </li>
+  </ul>
+  </div>
+---
+
+class: middle left bg-main1 hide-slide-number
+
+# References
+
+## `r icons::fontawesome("angle-double-right")` [Docker 101: Fundamentals & The Dockerfile](https://medium.com/@paigen11/docker-101-fundamentals-the-dockerfile-b33b59d0f14b)
+
+## `r icons::fontawesome("angle-double-right")` [An Introduction to Docker for R Users](https://colinfay.me/docker-r-reproducibility/)
+
+## `r icons::fontawesome("angle-double-right")` [Using docker to deploy an R plumber API](https://medium.com/@skyetetra/using-docker-to-deploy-an-r-plumber-api-863ccf91516d)
+
+## `r icons::fontawesome("angle-double-right")` [Applications with R and Docker](http://www.cascadia-analytics.com/docs/user2018-docker-r-tutorial-slides.pdf)
+
+---
+
+class: bg-main5 middle center hide-slide-number
+
+## [`r icons::fontawesome("envelope-open")`](mailto:lhzpaese@gmail.com) lhzpaese@gmail.com
+## [`r icons::fontawesome("github")`](https://github.com/paeselhz) https://github.com/paeselhz
+## [`r icons::fontawesome("linkedin")`](https://www.linkedin.com/in/lhzpaese/) https://www.linkedin.com/in/lhzpaese/
+
+---

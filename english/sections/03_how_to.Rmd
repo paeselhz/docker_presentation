@@ -1,0 +1,73 @@
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font3[HowTo - Dockerfile and Docker Compose]
+]]
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Dockerfile
+
+--
+  ## Dockerfile is a simple text file with a set of commands and instructions that the developer defines to build an image.
+  
+--
+```{r echo = T, eval = F}
+
+FROM rocker/shiny:3.5.3 # Base image
+
+RUN R -e "install.packages('dplyr')" # Actions to be done by the container 
+
+COPY apps/. /srv/shiny-server/ # File copy from the source to the container
+  
+```
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Docker-Compose
+
+--
+  ## Docker-Compose is a tool used to build a solution that leverages multiple containers at once.
+  ## The necessary services are defined at the `docker-compose.yaml` file, in order to allow the solution to run in an isolated environment.
+  
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Docker-Compose
+
+```{r echo = T, eval = F}
+version: "3"
+
+services:
+  shiny:
+    image: lhzpaese/shiny:3.5.3
+    container_name: shiny_server
+    ports:
+      - "3838:3838"
+  rstudio:
+    image: lhzpaese/rstudio:3.5.3
+    container_name: rstudio_server
+    ports:
+      - "8787:8787"
+```
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# DockerHUB
+
+--
+
+  ## Docker Hub is a cloud-based repository where Docker users an create, test, store and distribute built images of their containers.
+  ## It allows the creation of images from .text-hl[GitHub] `r icons::fontawesome("github")` repositories, building new versions at every commit from the developers.
+  
+---

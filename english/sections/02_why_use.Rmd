@@ -1,0 +1,46 @@
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font3[Why use Docker?]
+]]
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Advantages in using Docker:
+
+--
+
+  ## Simplified image setup
+  ## Better management of code
+  ### Avoids the pitfall: .text-hl3["It works in my machine"]
+  ## Developer keeps focused on the application
+  ### Making it easier to debug code
+        
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Where Docker can be used?
+
+--
+  
+  ## Every script, code, application that is developed, can be containerized using Docker for testing, deployment and distribution.
+  
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Where R belongs in this?
+
+--
+  
+  ## In the past years, the number of solutions that can use R as a base language has been increasing, from web applications to collect and visualize data, to the creation of APIs with Plumber.
+  
+  ## And all these solutions can leverage the benefits of using Docker to make it easier to implement and deploy!
+  
+---

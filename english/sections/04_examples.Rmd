@@ -1,0 +1,67 @@
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font3[RStudio + Shiny + Plumber using Docker]
+]]
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Rocker Project
+
+--
+
+  ## The Rocker Project is maintained by Carl Boettiger(UC Berkeley) and Dirk Eddelbuettel(Univ. of Illinois), as well as by the `r icons::fontawesome("r-project")` community.
+  ### The focus of the project is to provide in DockerHub `r icons::fontawesome("docker")` images of the main solutions that can be hosted by an environment built with R.
+  # .text_hl[[Rocker Project](https://www.rocker-project.org/)]
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# RStudio
+
+--
+
+  ## Running the code below in a terminal, it will run a container with the image of RStudio Server, hosted at port 8787.
+  
+```{sh eval = F, echo = T}
+docker run -d -p 8787:8787 rocker/rstudio:3.5.3
+```
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Shiny
+
+--
+
+  ## Running the code below in a terminal, it will run a container with the image of Shiny Server, hosted at port 3838.
+  
+```{sh eval = F, echo = T}
+docker run -d -p 3838:3838 rocker/shiny:3.5.3
+```
+
+  ## This solution starts the container with two *placeholder* apps.
+  
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# Plumber
+
+--
+
+  ## The image with Plumber solutions is not released by the Rocker Project, but there is an image from the developers of the package that provides the APIs.
+  ## The source code can be found in [GitHub `r icons::fontawesome("github")`](https://github.com/trestletech/plumber)
+  
+```{sh eval = F, echo = T}
+docker run -p 8080:8000 trestletech/plumber:latest
+```
+
+---

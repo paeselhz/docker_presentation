@@ -1,0 +1,57 @@
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font3[Introduction]
+]]
+
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# What is Docker?
+
+--
+
+  ## Docker is a tool developed by .text-hl[Google]
+  ## to ease the process of development and deployment of applications using 
+  ## .font2[CONTAINERS]
+  
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# How does Docker works?
+
+--
+  
+  ## Docker is an interface that manages different Containers in a single machine. It conceals different versions of environments, .text-hl2[OSs, Programs, Packages and Scripts] developed by the user, in images.
+  
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# How does Docker works?
+
+<div align="center">
+<img src="images/docker_images_containers.png" height="65%" width="65%" />
+</div>
+  
+---
+
+class: middle center bg-main1 hide-slide-number
+
+# What is the difference?
+
+--
+  <div class = "bullet">
+  <ul>
+  <li> This format of development allows the developers to have access to a more stable platform, ensuring reproducibility; </li>
+  <li> It abstracts a lot of the management necessary to run virtual machines that most developers are not interested; </li>
+  <li> Besides, given the ease of configuration for the images, it allows the deployment and update of multiple services in a faster way. </li>
+  </ul>
+  </div>
+  
+---
