@@ -15,8 +15,8 @@ class: middle center bg-main1 hide-slide-number
 
 --
 
-  ## O Projeto Rocker é mantido Carl Boettiger(UC Berkeley) e Dirk Eddelbuettel(Univ. of Illinois) e pela comunidade `r icon::fa_r_project()`.
-  ### O objetivo do projeto é fornecer no DockerHub `r icon::fa_docker()` imagens dos principais serviços que podem ser hospeados com um ambiente R.
+  ## O Projeto Rocker é mantido Carl Boettiger(UC Berkeley) e Dirk Eddelbuettel(Univ. of Illinois) e pela comunidade `r icons::fontawesome("r-project")`.
+  ### O objetivo do projeto é fornecer no DockerHub `r icons::fontawesome("docker")` imagens dos principais serviços que podem ser hospeados com um ambiente R.
   # .text_hl[[Rocker Project](https://www.rocker-project.org/)]
 
 ---
@@ -58,7 +58,7 @@ class: middle center bg-main1 hide-slide-number
 --
 
   ## A imagem contendo o serviço Plumber não é disponibilizada pelo Projeto Rocker, mas sim pelos desenvolvedores do pacote que fornece a API.
-  ## O código fonte pode ser encontrado no [GitHub `r icon::ii_social_github()`](https://github.com/trestletech/plumber)
+  ## O código fonte pode ser encontrado no [GitHub `r icons::fontawesome("github")`](https://github.com/trestletech/plumber)
   
 ```{sh eval = F, echo = T}
 docker run -p 8080:8000 trestletech/plumber:latest

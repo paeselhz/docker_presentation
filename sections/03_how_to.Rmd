@@ -17,7 +17,7 @@ class: middle center bg-main1 hide-slide-number
   ## Dockefile é simplesmente um arquivo texto com um conjunto de comandos que o usuário define para construir uma imagem.
   
 --
-```{dockerfile echo = T, eval = F}
+```{r echo = T, eval = F}
 
 FROM rocker/shiny:3.5.3 # Aqui é demonstrada a imagem-base
 
@@ -70,6 +70,6 @@ class: middle center bg-main1 hide-slide-number
 --
 
   ## Docker Hub é um repositório baseado na nuvem, onde os usuários do Docker criam, testam, guardam e distribuem imagens de containers. 
-  ## Ele permite a criação de imagens a partir de projetos no .text-hl[GitHub] `r icon::ii_social_github()`, compilando novas versões a cada commit feito pelo usuário.
+  ## Ele permite a criação de imagens a partir de projetos no .text-hl[GitHub] `r icons::fontawesome("github")`, compilando novas versões a cada commit feito pelo usuário.
   
 ---
